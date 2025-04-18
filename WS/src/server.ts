@@ -1,8 +1,11 @@
 
 import fastify from 'fastify'
 import { env } from './env'
+import { connectDB } from './lib/databse';
 
 export const app = fastify();
+
+app.register(connectDB)
 
 app
     .listen({
