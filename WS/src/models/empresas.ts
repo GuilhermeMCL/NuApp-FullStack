@@ -26,8 +26,8 @@ const empresa = new Schema({
         pais: String
     },
     geo: {
-        tipo: String,
-        cordinates: Array
+        type: String,
+        coordinates: Array
 
     },
     dataCadastro: {
@@ -46,4 +46,4 @@ empresa.index({ geo: '2dsphere' });
 
 
 
-module.exports = mongoose.model('Empresa', empresa);
+export const Empresa = mongoose.model('Empresa', empresa);

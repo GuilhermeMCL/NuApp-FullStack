@@ -2,10 +2,12 @@
 import fastify from 'fastify'
 import { env } from './env'
 import { connectDB } from './lib/databse';
+import { empresasRoutes } from './Routes/empresaRoutes';
 
 export const app = fastify();
 
 app.register(connectDB)
+app.register(empresasRoutes)
 
 app
     .listen({
