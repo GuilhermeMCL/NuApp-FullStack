@@ -1,0 +1,40 @@
+{
+  "name": "03-api-solid",
+  "version": "1.0.0",
+  "description": "GymPass style app.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "5.0.0",
+    "@types/jsonwebtoken": "9.0.9",
+    "@types/node": "18.14.1",
+    "eslint": "8.34.0",
+    "prisma": "4.10.1",
+    "tsup": "^8.4.0",
+    "tsx": "^3.14.0",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "@fastify/jwt": "9.0.4",
+    "@fastify/swagger": "9.4.2",
+    "@fastify/swagger-ui": "5.2.2",
+    "@google/generative-ai": "0.22.0",
+    "@prisma/client": "4.10.1",
+    "bcrypt": "5.1.1",
+    "bcryptjs": "3.0.2",
+    "dotenv": "16.0.3",
+    "fastify": "5.2.1",
+    "fastify-cors": "6.0.3",
+    "fastify-jwt": "^4.2.0",
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "^8.13.2",
+    "zod": "3.24.1"
+  }
+}
