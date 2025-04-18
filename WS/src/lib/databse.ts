@@ -1,9 +1,8 @@
+import { env } from "@/env";
 
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-dotenv.config();
-const { MONGO_URI } = process.env;
-const connectDB = async () => {
+const MONGO_URI = env.DB_URL;
+export const connectDB = async () => {
     try {
         await mongoose.connect(MONGO_URI, {
             useNewUrlParser: true,
@@ -25,3 +24,4 @@ const disconnectDB = async () => {
         console.error('MongoDB disconnection error:', error);
     }
 };
+
